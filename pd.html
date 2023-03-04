@@ -1,0 +1,177 @@
+<html>
+    <html lang="en">
+    <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+    </head>
+    <body>
+     <center>
+       
+     <style>
+   body {
+     --white: linear-gradient(white,white);
+     --gradient:linear-gradient(to right,hwb(290 60% 7%),#191cf1);
+     
+     background: var(--white);
+     background: var(--gradient);
+         font-family: Arial, Helvetica, sans-serif;
+       }
+   button{
+     background-color:rgb(219, 37, 239);
+     border-radius: 13px;
+     border: 1px solid white;
+     width: 80px;
+     height: 30px;
+     cursor: pointer;
+   }
+   .psw{
+     color: white;
+   }
+   .mp{
+     --white: linear-gradient(white,white);
+     --gradient:linear-gradient(to right,#e237b7,#0909c0);
+     
+     background: var(--white);
+     background: var(--gradient);
+     position: relative;
+     padding-top:90px;
+     width: 500px;
+     height: 500px;
+     border-radius: 25px;
+     border: 5px solid white;
+   
+   }
+   img{
+     height: 100px;
+     width: 100px;
+     position: relative;
+     bottom: 50px;
+     left:55px;
+   }
+   .dp{
+     position: relative;
+     right: 50px;
+     color: white;
+   }
+   input{
+    
+     border-radius: 5px;
+     border: 1px solid black;
+     cursor: pointer;
+   }
+   .pm{
+     background-color: #4744f1;
+     border-radius: 13px;
+     border: 1px solid white;
+     width: 80px;
+     height: 30px;
+     cursor: pointer;
+   }
+   ::placeholder{
+     color: black;
+   }
+   .sd{
+    position: relative;
+    right: 33px;
+   }
+   .ds{
+    position: relative;
+    right: 33px;
+   }
+   .pt{
+    box-sizing: border-box;
+    color: white;
+   }
+       
+     </style>
+   
+   <div class="mp">
+     <form action="dp.html">
+       <img src="add-friend.png" alt="">
+       <b class="dp">SIGN UP FORM</b>
+       <br>
+       <br>
+       <label> <b> Username : </b> </label>
+       <input type="text" placeholder="Enter Username" required >
+       <br>
+       <br>
+       <label> <b> Password : </b> </label>
+       <input type="password" placeholder="Enter Password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+       <br>
+       <br>
+       <label class="sd"> <b>  Confirm Password : </b> </label>
+       <input class="ds" type="password" placeholder="Enter Password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+        <br>
+        <br>
+       <input  class="pt" type="checkbox"> <b>Remember me <b/> </input>
+       <br>
+       <br>
+       <button  class="pm" > <b>  sign up </b> </button>
+       <br>
+       <br>
+       <br>
+       </form>
+     <form action="index.html">
+     <button class="" > <b>  Back</b> </button>
+   
+ </form>   
+   </div>
+   <script>
+     
+     // When the user clicks on the password field, show the message box
+     myInput.onfocus = function() {
+       document.getElementById("message").style.display = "block";
+     }
+     
+     // When the user clicks outside of the password field, hide the message box
+     myInput.onblur = function() {
+       document.getElementById("message").style.display = "none";
+     }
+     
+     // When the user starts to type something inside the password field
+     myInput.onkeyup = function() {
+       // Validate lowercase letters
+       var lowerCaseLetters = /[a-z]/g;
+       if(myInput.value.match(lowerCaseLetters)) {  
+         letter.classList.remove("invalid");
+         letter.classList.add("valid");
+       } else {
+         letter.classList.remove("valid");
+         letter.classList.add("invalid");
+       }
+       
+       // Validate capital letters
+       var upperCaseLetters = /[A-Z]/g;
+       if(myInput.value.match(upperCaseLetters)) {  
+         capital.classList.remove("invalid");
+         capital.classList.add("valid");
+       } else {
+         capital.classList.remove("valid");
+         capital.classList.add("invalid");
+       }
+     
+       // Validate numbers
+       var numbers = /[0-9]/g;
+       if(myInput.value.match(numbers)) {  
+         number.classList.remove("invalid");
+         number.classList.add("valid");
+       } else {
+         number.classList.remove("valid");
+         number.classList.add("invalid");
+       }
+       
+       // Validate length
+       if(myInput.value.length >= 8) {
+         length.classList.remove("invalid");
+         length.classList.add("valid");
+       } else {
+         length.classList.remove("valid");
+         length.classList.add("invalid");
+       }
+     }
+     </script>
+   </center>
+    </body>
+    </html>
